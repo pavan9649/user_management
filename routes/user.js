@@ -29,8 +29,7 @@ router.post("/signup", async (req, res) => {
       username: req.body.username,
       email: req.body.email,
       password:bcrypt.hashSync(req.body.password,10),
-      phone: req.body.phone,
-      isAdmin: req.body.isAdmin
+      phone: req.body.phone
       
     });
     user = await user.save();
